@@ -1,0 +1,16 @@
+#ifndef PHT_H
+#define PHT_H
+#include <Arduino.h>
+#include <Adafruit_MS8607.h>
+#include <Adafruit_Sensor.h>
+#include <Wire.h>
+class PHT : public Adafruit_MS8607 {
+    public:
+        PHT();
+        bool startPHT();
+        String printReadings();
+        double altitude;
+        double getAltitude();
+};
+
+#endif
